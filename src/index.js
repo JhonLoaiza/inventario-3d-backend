@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 // Arrancamos el servidor
 app.listen(port, '0.0.0.0', () => {
-    console.log(`🚀 Servidor corriendo en http://localhost:${port}`);
+    console.log(`🚀 Servidor corriendo en el puerto ${port}`);
 });
 
 console.log("--- PRUEBA v3: ¡El archivo CON CORS se está ejecutando! ---");
