@@ -18,6 +18,11 @@ app.use(express.json()); // Middleware para entender JSON
 
 const port = process.env.PORT || 4000;
 
+// --- ¡NUEVA RUTA DE SALUD (HEALTH CHECK)! ---
+// Esta es la ruta que Railway "golpea" para ver si la app está viva.
+app.get('/', (req, res) => {
+    res.status(200).send('¡API de Inventario 3D está viva!');
+});
 // --- Conectamos las rutas ---
 app.use('/api', materialesRoutes); // Todas las rutas empezarán con /api
 app.use('/api', bobinasRoutes);
